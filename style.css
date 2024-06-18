@@ -178,3 +178,137 @@ body{
     margin-top: 30px;
     text-align: center;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px;
+    color: white;
+    position: relative;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .search-box {
+    flex: 1;
+    margin: 0 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+header .menu {
+    display: none;
+}
+
+header .menu label {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hamburger menu */
+input[type="checkbox"] {
+    display: none;
+}
+
+header ul {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .search-box {
+        order: 1;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #333;
+    }
+
+    header ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    header .menu {
+        display: block;
+        order: 2;
+    }
+
+    header input[type="checkbox"]:checked ~ ul {
+        display: flex;
+    }
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    z-index: 1001;
+    display: none;
+  }
+  
+  .cookie-popup article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cookie-popup p {
+    margin-bottom: 1rem;
+  }
+  
+  .cookie-popup button {
+    background-color: #C79023;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .cookie-popup button:hover {
+    background-color: #fff;
+    color: #C79023;
+  }
+  
+  .cookie-popup a {
+    color: #C79023;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
