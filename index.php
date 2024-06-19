@@ -20,10 +20,10 @@ body  {
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <a href="loginscreen.php"><li><i class="fa-solid fa-user"></i></a>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Vrienden</a></li>
+                <li><a href="#">Highscore</a></li>
+                <li><a href="loginscreen.php">Login/Register</a></li>
                       
                 </li>
             </ul>
@@ -32,7 +32,10 @@ body  {
                     <i class="fa fa-bars"></i>
                 </label>
             </div>
-    </header>
+</header>
+<body>
+
+</body>
 
 
 </body>

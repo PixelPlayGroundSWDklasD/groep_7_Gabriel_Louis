@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +23,7 @@ body  {
                 <li><a href="#">Games</a></li>
                 <li><a href="#">Vrienden</a></li>
                 <li><a href="#">Highscore</a></li>
-                <li><a href="#">Uitloggen</a></li>
-                <a href="profile.php"><li><i class="fa-solid fa-user"></i></a>
+                <li><a href="loginscreen.php">Login/Register</a></li>
                       
                 </li>
             </ul>
@@ -39,12 +37,3 @@ body  {
 
 </body>
 </html>
-<?php
-session_start();
-if (isset($_SESSION["username"])) {
-    $username = $_SESSION["username"];
-    echo "<h1>Welkom, $username!</h1>";
-} else {
-    echo "You are not logged in.";
-}
-?>
