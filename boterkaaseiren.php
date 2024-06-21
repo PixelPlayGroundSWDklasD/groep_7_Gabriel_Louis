@@ -42,6 +42,6 @@ body  {
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="boterkaaseiren.js"></script>
 </body>
 </html>
