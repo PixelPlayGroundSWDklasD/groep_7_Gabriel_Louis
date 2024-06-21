@@ -1,179 +1,300 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
- 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
  
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("images/Cyberpunk-City-Street-Scifi-Wallpaper-Graphics-74865888-1.png");
-}
- 
-.container{
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
-}
- 
-.container .forms{
-    display: flex;
-    align-items: center;
-    height: 440px;
-    width: 200%;
-    transition: height 0.2s ease;
-}
- 
- 
-.container .form{
-    width: 50%;
-    padding: 30px;
-    background-color: #fff;
-    transition: margin-left 0.18s ease;
-}
- 
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
-}
- 
-.container .signup{
-    opacity: 0;
-    transition: opacity 0.09s ease;
-}
-.container.active .signup{
-    opacity: 1;
-    transition: opacity 0.2s ease;
-}
- 
-.container.active .forms{
-    height: 600px;
-}
-.container .form .title{
-    position: relative;
-    font-size: 27px;
-    font-weight: 600;
-}
- 
-.form .title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background-color: rgb(43, 0, 43);
-    border-radius: 25px;
-}
- 
-.form .input-field{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
-}
- 
-.input-field input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0 35px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 2px solid #ccc;
-    border-top: 2px solid transparent;
-    transition: all 0.2s ease;
-}
- 
-.input-field input:is(:focus, :valid){
-    border-bottom-color: rgb(44, 0, 44);
-}
- 
-.input-field i{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 23px;
-    transition: all 0.2s ease;
-}
- 
-.input-field input:is(:focus, :valid) ~ i{
-    color: #4070f4;
-}
- 
-.input-field i.icon{
-    left: 0;
-}
-.input-field i.showHidePw{
-    right: 0;
-    cursor: pointer;
-    padding: 10px;
-}
- 
-.form .checkbox-text{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-}
- 
-.checkbox-text .checkbox-content{
-    display: flex;
-    align-items: center;
-}
- 
-.checkbox-content input{
-    margin-right: 10px;
-    accent-color: #420063;
-}
- 
-.form .text{
-    color: #333;
-    font-size: 14px;
-}
- 
-.form a.text{
-    color: #9600a6;
-    text-decoration: none;
-}
-.form a:hover{
-    text-decoration: underline;
-}
- 
-.form .button{
-    margin-top: 35px;
-}
- 
-.form .button input{
-    border: none;
+body {
+    background: url("../images/Cyberpunk-City-Street-Scifi-Wallpaper-Graphics-74865888-1.png") no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    background-color: #9700fc;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
  
-.button input:hover{
-    background-color: rgb(42, 0, 42);
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 50px;
 }
  
-.form .login-signup{
-    margin-top: 30px;
+#chk1 {
+    display: none;
+}
+ 
+header .logo {
+    flex: 1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+ 
+header ul {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+ 
+header ul li {
+    margin: 0 15px;
+}
+ 
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: border-bottom 0.3s;
+}
+ 
+header ul li a:hover {
+    border-bottom: 2px solid #007bff;
+}
+ 
+header .menu {
+    display: none;
+}
+ 
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
     text-align: center;
+    padding: 20px;
+}
+ 
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+ 
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+ 
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+ 
+.hero-buttons .btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+ 
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+ 
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+ 
+.content-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+ 
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+ 
+.content-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+ 
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ 
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+ 
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+ 
+@media (max-width: 1000px) {
+    header ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.7);
+        height: calc(100vh - 80px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+ 
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+ 
+    #chk1:checked ~ ul {
+        right: 0;
+    }
+}
+.games-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+}
+ 
+.games-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: absolute;
+    left: 600px;
+    top: 15%;
+ 
+}
+ 
+.game-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ 
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    margin-top: 20%;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+   
+}
+ 
+.game-card:hover {
+    transform: translateY(-10px);
+}
+ 
+.game-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+ 
+.game-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+ 
+.game-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+ 
+.game-card .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+ 
+.game-card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+#game {
+    text-align: center;
+    position: relative;
+    padding: 250px;
+    padding-left: 600px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    padding-left: 50px;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#status {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#reset {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    text-align: center;
+}
+
+#confirmation button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
 }
