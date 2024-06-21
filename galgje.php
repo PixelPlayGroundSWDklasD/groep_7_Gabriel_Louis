@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+<header>
+    <input type="checkbox" name="" id="chk1">
+    <div class="logo"><h1>Pixel Playground</h1></div>
+    <div class="search-box">
+        <!-- Optional search input -->
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="games.php">Games</a></li>
+        <li><a href="#">Vrienden</a></li>
+        <li><a href="#">Highscore</a></li>
+        <li><a href="loginscreen.php">Login/Register</a></li>
+    </ul>
+    <div class="menu">
+        <label for="chk1">
+            <i class="fa fa-bars"></i>
+        </label>
+    </div>
+</header>
     <div class="body-game">
     <div class="game-container">
         <div class="game-stats">

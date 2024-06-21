@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +41,7 @@ session_start();
             <img src="images/7.webp" alt="Tic Tac Toe">
             <h3>Tic Tac Toe</h3>
             <p>Challenge your friend in Tic Tac Toe!</p>
-            <a href="tictactoe.php" class="btn btn-primary">Play Now</a>
+            <a href="boterkaaseiren.php" class="btn btn-primary">Play Now</a>
         </div>
     </div>
 </div>
