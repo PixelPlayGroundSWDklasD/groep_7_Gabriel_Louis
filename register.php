@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result) {
         echo "Registratie succesvol!";
-        header("Location: loginscreen.php");
+        header("Location: ingelogd.php");
         exit();
     } else {
         echo "Registratie mislukt.";
