@@ -16,7 +16,6 @@ session_start();
     <input type="checkbox" name="" id="chk1">
     <div class="logo"><h1>Pixel Playground</h1></div>
     <div class="search-box">
-        <!-- Optional search input -->
     </div>
     <ul>
         <li><a href="ingelogd.php">Home</a></li>
