@@ -1,13 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+ 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial;
 }
-
+ 
 body{
     height: 100vh;
     display: flex;
@@ -15,7 +14,7 @@ body{
     justify-content: center;
     background-image: url("images/Cyberpunk-City-Street-Scifi-Wallpaper-Graphics-74865888-1.png");
 }
-
+ 
 .container{
     position: relative;
     max-width: 430px;
@@ -26,7 +25,7 @@ body{
     overflow: hidden;
     margin: 0 20px;
 }
-
+ 
 .container .forms{
     display: flex;
     align-items: center;
@@ -34,21 +33,21 @@ body{
     width: 200%;
     transition: height 0.2s ease;
 }
-
-
+ 
+ 
 .container .form{
     width: 50%;
     padding: 30px;
     background-color: #fff;
     transition: margin-left 0.18s ease;
 }
-
+ 
 .container.active .login{
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
-
+ 
 .container .signup{
     opacity: 0;
     transition: opacity 0.09s ease;
@@ -57,7 +56,7 @@ body{
     opacity: 1;
     transition: opacity 0.2s ease;
 }
-
+ 
 .container.active .forms{
     height: 600px;
 }
@@ -66,7 +65,7 @@ body{
     font-size: 27px;
     font-weight: 600;
 }
-
+ 
 .form .title::before{
     content: '';
     position: absolute;
@@ -77,14 +76,14 @@ body{
     background-color: rgb(43, 0, 43);
     border-radius: 25px;
 }
-
+ 
 .form .input-field{
     position: relative;
     height: 50px;
     width: 100%;
     margin-top: 30px;
 }
-
+ 
 .input-field input{
     position: absolute;
     height: 100%;
@@ -97,11 +96,11 @@ body{
     border-top: 2px solid transparent;
     transition: all 0.2s ease;
 }
-
+ 
 .input-field input:is(:focus, :valid){
     border-bottom-color: rgb(44, 0, 44);
 }
-
+ 
 .input-field i{
     position: absolute;
     top: 50%;
@@ -110,11 +109,11 @@ body{
     font-size: 23px;
     transition: all 0.2s ease;
 }
-
+ 
 .input-field input:is(:focus, :valid) ~ i{
     color: #4070f4;
 }
-
+ 
 .input-field i.icon{
     left: 0;
 }
@@ -123,29 +122,29 @@ body{
     cursor: pointer;
     padding: 10px;
 }
-
+ 
 .form .checkbox-text{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
-
+ 
 .checkbox-text .checkbox-content{
     display: flex;
     align-items: center;
 }
-
+ 
 .checkbox-content input{
     margin-right: 10px;
     accent-color: #420063;
 }
-
+ 
 .form .text{
     color: #333;
     font-size: 14px;
 }
-
+ 
 .form a.text{
     color: #9600a6;
     text-decoration: none;
@@ -153,11 +152,11 @@ body{
 .form a:hover{
     text-decoration: underline;
 }
-
+ 
 .form .button{
     margin-top: 35px;
 }
-
+ 
 .form .button input{
     border: none;
     color: #fff;
@@ -169,146 +168,12 @@ body{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+ 
 .button input:hover{
     background-color: rgb(42, 0, 42);
 }
-
+ 
 .form .login-signup{
     margin-top: 30px;
     text-align: center;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 20px 20px;
-    color: white;
-    position: relative;
-}
-
-header .logo h1 {
-    margin: 0;
-}
-
-header .search-box {
-    flex: 1;
-    margin: 0 20px;
-}
-
-header ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-header ul li {
-    margin: 0 10px;
-}
-
-header ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-header ul li a:hover {
-    text-decoration: underline;
-}
-
-header .menu {
-    display: none;
-}
-
-header .menu label {
-    cursor: pointer;
-    font-size: 24px;
-}
-
-/* Hamburger menu */
-input[type="checkbox"] {
-    display: none;
-}
-
-header ul {
-    display: flex;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    header .search-box {
-        order: 1;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    header ul {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        background-color: #333;
-    }
-
-    header ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    header .menu {
-        display: block;
-        order: 2;
-    }
-
-    header input[type="checkbox"]:checked ~ ul {
-        display: flex;
-    }
-}
-
-.cookie-popup {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    z-index: 1001;
-    display: none;
-  }
-  
-  .cookie-popup article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cookie-popup p {
-    margin-bottom: 1rem;
-  }
-  
-  .cookie-popup button {
-    background-color: #C79023;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 1rem;
-  }
-  
-  .cookie-popup button:hover {
-    background-color: #fff;
-    color: #C79023;
-  }
-  
-  .cookie-popup a {
-    color: #C79023;
-    text-decoration: none;
-    margin-top: 1rem;
-  }
